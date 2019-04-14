@@ -292,7 +292,8 @@ RUN cd / && git clone https://github.com/meetecho/janus-gateway.git && cd /janus
 
 #COPY nginx.conf /usr/local/nginx/nginx.conf
 
-CMD nginx && janus
+CMD nginx
+ENTRYPOINT [ "janus" ]
 
 # RUN apt-get -y install iperf iperf3
 # RUN git clone https://github.com/HewlettPackard/netperf.git && \
